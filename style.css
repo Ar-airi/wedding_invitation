@@ -467,6 +467,29 @@ html, body {
   margin: 0;
 }
 
+.rsvp-radio-group {
+  display: flex;
+  gap: 1rem; /* spacing between options */
+  justify-content: center;
+  flex-wrap: wrap; /* wrap on small screens */
+  margin-top: 0.5rem;
+}
+
+.rsvp-radio-group label {
+  display: flex;
+  align-items: center;
+  font-family: 'Taviraj', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: #333;
+  cursor: pointer;
+}
+
+.rsvp-radio-group input[type="radio"] {
+  margin-right: 0.5rem; /* space between radio and text */
+  accent-color: #7f4f24; /* makes the circle match your color theme */
+}
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
   .container {
@@ -527,3 +550,4 @@ html, body {
   }
 
 }
+
