@@ -142,13 +142,21 @@
             <label for="telefon">Nombor Telefon:</label>
             <input type="tel" id="telefon" name="Nombor_Telefon" required>
 
-            <label for="kehadiran">Kehadiran:</label>
-            <select id="kehadiran" name="Kehadiran" required>
-              <option value="">-- Sila Pilih --</option>
-              <option value="0">0 - Tidak dapat hadir</option>
-              <option value="1">1 - Hadir seorang sahaja</option>
-              <option value="2">2 - Hadir dengan pasangan</option>
-            </select>
+            <label>Kehadiran:</label>
+<div class="rsvp-radio-group">
+  <label>
+    <input type="radio" name="Kehadiran" value="0" required>
+    0 - Tidak dapat hadir
+  </label>
+  <label>
+    <input type="radio" name="Kehadiran" value="1">
+    1 - Hadir seorang sahaja
+  </label>
+  <label>
+    <input type="radio" name="Kehadiran" value="2">
+    2 - Hadir dengan pasangan
+  </label>
+</div>
 
             <button type="submit">RSVP</button>
           </form>
@@ -229,5 +237,6 @@
 
 </body>
 </html>
+
 
 
