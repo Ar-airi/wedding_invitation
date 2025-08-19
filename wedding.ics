@@ -1,0 +1,11 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Your Wedding//EN
+BEGIN:VEVENT
+SUMMARY:Aqielah & Idzuddin
+DESCRIPTION:Walimatulurus - Alya Aqielah Binti Shaifulhizan & Mohamad Idzuddin Bin Kamaruddin
+LOCATION:Victoria Hall, Kamalinda Events & Wedding, Level UG, Utropolis Marketplace, Jalan Kontraktor U1/14, 40150 Shah Alam, Selangor
+DTSTART;VALUE=DATE:20251122
+DTEND;VALUE=DATE:20251123
+END:VEVENT
+END:VCALENDAR
