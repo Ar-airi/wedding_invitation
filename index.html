@@ -263,7 +263,7 @@ form.addEventListener('submit', function(e) {
     formData.delete("Jumlah_Tetamu");
   }
 
-  responseDiv.innerHTML = '<p style="color:#7f4f24;">Menghantar maklumat anda...</p>';
+  responseDiv.innerHTML = '<p style="color:#7f4f24;">Sending your response...</p>';
   responseDiv.style.display = 'block';
 
   fetch(form.action, { method: 'POST', body: formData })
@@ -286,3 +286,4 @@ form.addEventListener('submit', function(e) {
 
 </body>
 </html>
+
