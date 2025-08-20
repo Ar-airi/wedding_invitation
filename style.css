@@ -381,13 +381,16 @@ html, body {
 .rsvp-radio-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.1rem 1rem;   /* first value = row gap, second value = column gap */
+  text-align: left;
+  gap: 0.2rem 1rem; 
+  width: 100%;
 }
 
 .rsvp-radio-group label {
   display: flex;        /* make label a flex container */
-  align-items: center;  /* vertically align radio and text */
-  gap: 0rem;          /* space between radio and text */
+  flex-wrap: wrap;
+  align-items: left;  /* vertically align radio and text */
+  gap: 0.2rem;          /* space between radio and text */
   white-space: nowrap;
   font-family: 'Taviraj', serif;
   font-style: italic;
@@ -396,7 +399,6 @@ html, body {
   color: #333;
   cursor: pointer;
 }
-
 
 .rsvp-radio-group input[type="radio"] {
   margin-right: 0; /* space between radio and text */
@@ -456,6 +458,7 @@ html, body {
     max-width: 300px;
   }
 }
+
 
 
 
