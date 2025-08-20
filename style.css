@@ -31,21 +31,17 @@ html, body {
 .section-divider {
   display: flex;
   justify-content: center;
-  margin: 6vh 0; /* vertical spacing that's also responsive */
+  margin: 6vh 0;
 }
 
 .section-divider img {
-  width: 50vw;         /* 60% of screen width */
-  max-width: 300px;    /* Don't get too big on desktop */
-  height: auto;        /* Maintain image aspect ratio */
+  width: 50vw;
+  max-width: 300px;
+  height: auto;
   opacity: 0.9;
 }
 
 /* Fullscreen Entry Screen */
-:root {
-  --vh: 100vh;
-}
-
 #entry-screen {
   position: fixed;
   inset: 0;
@@ -68,7 +64,6 @@ html, body {
   box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.2);
   transition: transform 1.5s ease-in-out;
   z-index: 1;
-
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   border: 1px solid rgba(231, 215, 187, 0.4);
@@ -102,7 +97,6 @@ html, body {
   transform: scale(1.05);
 }
 
-
 /* Section Backgrounds */
 .section {
   width: 100%;
@@ -126,14 +120,15 @@ html, body {
 
 .section1 {
   background-image: url('1.jpg');
-  background-attachment: fixed ;
+  background-attachment: fixed;
 }
 
 .section2 {
   background-image: url('2.jpg');
-  background-attachment: fixed ;
+  background-attachment: fixed;
 }
 
+/* Inline Names */
 .inline-names {
   display: flex;
   justify-content: center;
@@ -141,14 +136,14 @@ html, body {
   flex-wrap: nowrap;
   gap: 0.2rem;
   max-width: 100%;
-  white-space: nowrap; /* 💡 Keeps the name on one line */
+  white-space: nowrap;
 }
 
 .inline-names span {
   display: inline-block;
   font-size: min(2.2rem, 4vw);
   line-height: 1;
-  letter-spacing: -1px; /* 💡 Pulls letters slightly closer */
+  letter-spacing: -1px;
 }
 
 .inline-names span.name-initial {
@@ -224,84 +219,9 @@ html, body {
   line-height: 1.6;
 }
 
-.save-date-buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin: 2rem auto;
-}
-
-.save-date-buttons a {
-  text-decoration: none;
-}
-
-.save-date-buttons a button {
-  margin: 0.5rem;
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
-  cursor: pointer;
-  border-radius: 6px;
-  border: none;
-  background-color: #e7d7bb;
-  color: #7f4f24;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-  width: 250px;
-  height: 50px;
-  line-height: 1.4;
-  white-space: normal;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-wrap: balance;
-}
-
-.save-date-buttons a button:hover {
-  background-color: #e7d7bb;
-}
-
-.maps-buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin: 2rem auto;
-}
-
-.maps-buttons a {
-  text-decoration: none;
-}
-
-.maps-buttons a button {
-  margin: 0.5rem;
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
-  cursor: pointer;
-  border-radius: 6px;
-  border: none;
-  background-color: #e7d7bb;
-  color: #7f4f24;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-  width: 100px;
-  height: 50px;
-  line-height: 1.4;
-  white-space: normal;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-wrap: balance;
-}
-
-.maps-buttons a button:hover {
-  background-color: #e7d7bb;
-}
-
+/* Save-Date, Maps, Phone Buttons */
+.save-date-buttons,
+.maps-buttons,
 .phone-buttons {
   display: flex;
   justify-content: center;
@@ -311,10 +231,14 @@ html, body {
   margin: 2rem auto;
 }
 
+.save-date-buttons a,
+.maps-buttons a,
 .phone-buttons a {
   text-decoration: none;
 }
 
+.save-date-buttons a button,
+.maps-buttons a button,
 .phone-buttons a button {
   margin: 0.5rem;
   padding: 1rem 2rem;
@@ -326,22 +250,20 @@ html, body {
   color: #7f4f24;
   font-weight: 600;
   transition: background-color 0.3s ease;
-  width: 300px;
-  height: 50px;
-  line-height: 1.4;
-  white-space: normal;
-  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-wrap: balance;
+  text-align: center;
+  line-height: 1.4;
 }
 
+.save-date-buttons a button:hover,
+.maps-buttons a button:hover,
 .phone-buttons a button:hover {
-  background-color: #e7d7bb;
+  background-color: #d8cab8;
 }
 
-/* Timeline Styles */
+/* Timeline */
 .timeline-container {
   padding: 2rem;
   border-radius: 10px;
@@ -370,8 +292,7 @@ html, body {
   padding-left: 0.5rem;
 }
 
-/* RSVP Section */
-/* RSVP Section - Updated Styles */
+/* ===== RSVP FORM ===== */
 .container {
   background: rgba(255, 255, 255, 0.5);
   padding: 1.5rem;
@@ -393,13 +314,6 @@ html, body {
 }
 
 .rsvp p {
-  font-family: 'Taviraj', serif;
-  font-style: italic;
-  font-weight: 300;
-  font-size: 1rem;
-  color: black;
-  letter-spacing: 0.5px;
-  line-height: 1.6;
   margin-bottom: 1.5rem;
 }
 
@@ -463,21 +377,18 @@ html, body {
   display: none;
 }
 
-#rsvp-response p {
-  margin: 0;
-}
-
+/* Make the radio buttons side by side */
 .rsvp-radio-group {
   display: flex;
-  gap: 0.2rem; /* spacing between options */
-  justify-content: center;
-  flex-wrap: wrap; /* wrap on small screens */
-  margin-top: 0.5rem;
+  flex-wrap: wrap;
+  gap: 0.1rem 1rem;   /* first value = row gap, second value = column gap */
 }
 
 .rsvp-radio-group label {
-  display: flex;
-  align-items: center;
+  display: flex;        /* make label a flex container */
+  align-items: center;  /* vertically align radio and text */
+  gap: 0rem;          /* space between radio and text */
+  white-space: nowrap;
   font-family: 'Taviraj', serif;
   font-style: italic;
   font-weight: 400;
@@ -486,27 +397,19 @@ html, body {
   cursor: pointer;
 }
 
+
 .rsvp-radio-group input[type="radio"] {
-  margin-right: 0.5rem; /* space between radio and text */
-  accent-color: #7f4f24; /* makes the circle match your color theme */
+  margin-right: 0; /* space between radio and text */
+  accent-color: #7f4f24; /* match your color theme */
 }
-/* Mobile Responsiveness */
+
+/* ===== Media Queries ===== */
 @media (max-width: 768px) {
   .container {
     padding: 1.2rem;
     width: 95%;
   }
   
-  .rsvp button {
-    padding: 0.7rem 1.2rem;
-    font-size: 0.9rem;
-  }
-  
-  .rsvp input,
-  .rsvp select {
-    padding: 0.7rem;
-  }
-
   .section-divider img {
     width: 80vw;
     max-width: 300px;
@@ -522,22 +425,26 @@ html, body {
     background-size: cover;
   }
 
-  .container {
-    padding: 1rem;
-    width: 90%;
+  .rsvp button {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
   }
 
+  .rsvp input,
+  .rsvp select {
+    padding: 0.7rem;
+  }
 }
 
 @media (max-width: 480px) {
   .container {
     padding: 1rem;
   }
-  
+
   .rsvp label {
     font-size: 0.85rem;
   }
-  
+
   .rsvp input,
   .rsvp select {
     padding: 0.6rem;
@@ -548,7 +455,4 @@ html, body {
     width: 80vw;
     max-width: 300px;
   }
-
 }
-
-
