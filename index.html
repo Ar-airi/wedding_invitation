@@ -197,29 +197,6 @@ enterBtn.addEventListener("click", () => {
 
   leftDoor.style.transform = "translateX(-100%)";
   rightDoor.style.transform = "translateX(100%)";
-
-  setTimeout(() => {
-    entryScreen.style.display = "none";
-    document.body.style.overflow = "auto";
-
-    // Determine where Section 2 starts
-    const targetY = document.querySelector(".section2").offsetTop;
-
-    // Start a smooth scroll animation
-    function smoothScroll() {
-      const currentY = window.scrollY;
-      if (currentY < targetY) {
-        // Scroll a portion closer each frame (tweak multiplier for speed)
-        window.scrollTo({
-          top: currentY + (targetY - currentY) * 0.01,
-          behavior: "smooth"
-        });
-        requestAnimationFrame(smoothScroll);
-      }
-    }
-    requestAnimationFrame(smoothScroll);
-    
-  }, 1600); // Wait for doors to finish
 });
 
 
@@ -291,6 +268,7 @@ form.addEventListener('submit', function(e) {
 
 </body>
 </html>
+
 
 
 
