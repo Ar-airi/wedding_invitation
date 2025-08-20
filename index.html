@@ -143,18 +143,16 @@
             <input type="tel" id="telefon" name="Nombor_Telefon" required>
 
             <label>Kehadiran:</label>
-<div class="rsvp-radio-group">
-  <label>
-    <input type="radio" name="Kehadiran" value="0" required>
-    Tidak dapat hadir
-  </label>
-  <label>
-    <input type="radio" name="Kehadiran" value="1">
-    Hadir seorang sahaja
-  </label>
-</div>
+            <label>
+              <div class="rsvp-radio-group">
+                <input type="radio" name="Kehadiran" value="0" required>
+                Tidak dapat hadir
+                <input type="radio" name="Kehadiran" value="1">
+                Hadir seorang sahaja
+              </div>
+            </label>
 
-            <button type="submit">RSVP</button>
+          <button type="submit">RSVP</button>
           </form>
           <div id="rsvp-response" style="display: none; margin-top: 1rem; text-align: center;"></div>
         </section>
@@ -233,6 +231,7 @@
 
 </body>
 </html>
+
 
 
 
