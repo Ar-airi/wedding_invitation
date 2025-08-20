@@ -389,6 +389,7 @@ html, body {
   align-items: center;  /* vertically align radio and text */
   gap: 0rem;          /* space between radio and text */
   white-space: nowrap;
+   flex: 1 1 200px;
   font-family: 'Taviraj', serif;
   font-style: italic;
   font-weight: 400;
@@ -461,6 +462,7 @@ html, body {
     max-width: 300px;
   }
 }
+
 
 
 
