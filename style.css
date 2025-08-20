@@ -438,7 +438,8 @@ html, body {
 }
 
 @media (max-width: 480px) {
-  .container {
+  .container,
+  .rsvp-radio-group label {
     padding: 1rem;
   }
 
@@ -458,5 +459,6 @@ html, body {
     max-width: 300px;
   }
 }
+
 
 
