@@ -42,7 +42,7 @@
       </div>
       <p>Assalamualaikum w.b.t<br>Dengan penuh kesyukuran dan segala hormatnya, kami<br>With all gratitude and respect, we</p>
       <h1><b>SHAIFULHIZAN BIN HASHIM<br>&<br>AILEEN CHAN BINTI MOHD MANSOR</b></h1>
-      <p>menjemput YBhg. Tan Sri/Puan Sri/Dato'/Datin/<br>Tuan/Puan/Saudara/Saudari<br>ke majlis perkahwinan puteri kami<br>
+      <p>menjemput YBhg. Tan Sri/Puan Sri/Dato'/Datin/<br>Tuan/Puan/Saudara/Saudari<br> sekeluarga ke majlis perkahwinan puteri kami<br>
       cordially invite you and family to join us at the<br>wedding reception of our daughter</p>
       <br>
       <div class="inline-names">
@@ -189,7 +189,6 @@ const leftDoor = document.querySelector(".left-door");
 const rightDoor = document.querySelector(".right-door");
 const bgm = document.getElementById("bgm");
 document.body.style.overflow = "hidden";
-
 enterBtn.addEventListener("click", () => {
   enterBtn.style.display = "none";
   bgm.volume = 0.5;
@@ -202,21 +201,19 @@ enterBtn.addEventListener("click", () => {
     entryScreen.style.display = "none";
     document.body.style.overflow = "auto";
 
-    // Start continuous auto-scroll from top (Section 1)
-    function startAutoScroll() {
-      const scrollSpeed = 0.5; // pixels per frame, adjust speed
+    // tiny delay to ensure scroll works
+    setTimeout(() => {
+      const scrollSpeed = 0.5;
       function autoScroll() {
-        if (window.innerHeight + window.scrollY < document.body.offsetHeight) {
+        if (window.innerHeight + window.scrollY < document.body.scrollHeight) {
           window.scrollBy(0, scrollSpeed);
           requestAnimationFrame(autoScroll);
         }
       }
       requestAnimationFrame(autoScroll);
-    }
+    }, 50);
 
-    startAutoScroll(); // begin scrolling immediately after doors
-
-  }, 1600); // Wait for doors animation to finish
+  }, 1600);
 });
 
 // RSVP Form Handling
@@ -286,4 +283,5 @@ form.addEventListener('submit', function(e) {
 
 </body>
 </html>
+
 
