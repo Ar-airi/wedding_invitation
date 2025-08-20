@@ -202,27 +202,22 @@ enterBtn.addEventListener("click", () => {
     entryScreen.style.display = "none";
     document.body.style.overflow = "auto";
 
-    // Determine where Section 2 starts
-    const targetY = document.querySelector(".section2").offsetTop;
-
-    // Start a smooth scroll animation
-    function smoothScroll() {
-      const currentY = window.scrollY;
-      if (currentY < targetY) {
-        // Scroll a portion closer each frame (tweak multiplier for speed)
-        window.scrollTo({
-          top: currentY + (targetY - currentY) * 0.01,
-          behavior: "smooth"
-        });
-        requestAnimationFrame(smoothScroll);
+    // Start continuous auto-scroll from top (Section 1)
+    function startAutoScroll() {
+      const scrollSpeed = 0.5; // pixels per frame, adjust speed
+      function autoScroll() {
+        if (window.innerHeight + window.scrollY < document.body.offsetHeight) {
+          window.scrollBy(0, scrollSpeed);
+          requestAnimationFrame(autoScroll);
+        }
       }
+      requestAnimationFrame(autoScroll);
     }
-    requestAnimationFrame(smoothScroll);
-    
-  }, 1600); // Wait for doors to finish
+
+    startAutoScroll(); // begin scrolling immediately after doors
+
+  }, 1600); // Wait for doors animation to finish
 });
-
-
 
 // RSVP Form Handling
 const form = document.getElementById('rsvp-form');
@@ -291,13 +286,3 @@ form.addEventListener('submit', function(e) {
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
