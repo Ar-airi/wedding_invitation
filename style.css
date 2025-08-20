@@ -389,7 +389,6 @@ html, body {
   align-items: center;  /* vertically align radio and text */
   gap: 0rem;          /* space between radio and text */
   white-space: nowrap;
-   flex: 1 1 200px;
   font-family: 'Taviraj', serif;
   font-style: italic;
   font-weight: 400;
@@ -406,8 +405,7 @@ html, body {
 
 /* ===== Media Queries ===== */
 @media (max-width: 768px) {
-  .container,
-  .rsvp-radio-group label {
+  .container {
     padding: 1.2rem;
     width: 95%;
   }
@@ -433,26 +431,22 @@ html, body {
   }
 
   .rsvp input,
-  .rsvp select,
-  .rsvp-radio-group label {
+  .rsvp select {
     padding: 0.7rem;
   }
 }
 
 @media (max-width: 480px) {
-  .container,
-  .rsvp-radio-group label {
+  .container{
     padding: 1rem;
   }
 
-  .rsvp label,
-  .rsvp-radio-group label {
+  .rsvp label {
     font-size: 0.85rem;
   }
 
   .rsvp input,
-  .rsvp select,
-  .rsvp-radio-group label {
+  .rsvp select{
     padding: 0.6rem;
     font-size: 0.85rem;
   }
@@ -462,6 +456,7 @@ html, body {
     max-width: 300px;
   }
 }
+
 
 
 
