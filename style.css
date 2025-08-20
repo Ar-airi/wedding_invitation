@@ -388,7 +388,6 @@ html, body {
 
 .rsvp-radio-group label {
   display: flex;        /* make label a flex container */
-  flex-wrap: wrap;
   align-items: left;  /* vertically align radio and text */
   gap: 0.2rem;          /* space between radio and text */
   white-space: nowrap;
@@ -458,6 +457,7 @@ html, body {
     max-width: 300px;
   }
 }
+
 
 
 
