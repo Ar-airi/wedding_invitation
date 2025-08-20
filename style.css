@@ -4,453 +4,455 @@
 @import url('https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap');
 
 :root {
-    --vh: 100vh;
+  --vh: 100vh;
 }
 
 html {
-    font-size: clamp(16px, 2vw, 18px);
+  font-size: clamp(16px, 2vw, 18px);
 }
 
+/* Reset & Prevent Dark Mode */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
-    width: 100%;
-    scroll-behavior: smooth;
-    font-family: 'Georgia', serif;
-    color-scheme: light only;
-    background-color: #e7d7bb;
-    overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+  font-family: 'Georgia', serif;
+  color-scheme: light only;
+  background-color: #e7d7bb;
+  overflow-x: hidden;
 }
 
 .section-divider {
-    display: flex;
-    justify-content: center;
-    margin: 6vh 0;
+  display: flex;
+  justify-content: center;
+  margin: 6vh 0;
 }
 
 .section-divider img {
-    width: 50vw;
-    max-width: 300px;
-    height: auto;
-    opacity: 0.9;
+  width: 50vw;
+  max-width: 300px;
+  height: auto;
+  opacity: 0.9;
 }
 
 /* Fullscreen Entry Screen */
 #entry-screen {
-    position: fixed;
-    inset: 0;
-    width: 100vw;
-    height: calc(var(--vh, 1vh) * 100);
-    background-color: transparent;
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: calc(var(--vh, 1vh) * 100);
+  background-color: transparent;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .door {
-    position: absolute;
-    top: 0;
-    width: 50%;
-    height: calc(var(--vh, 1vh) * 100);
-    background: rgba(140, 122, 91, 0.6);
-    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.2);
-    transition: transform 1.5s ease-in-out;
-    z-index: 1;
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border: 1px solid rgba(231, 215, 187, 0.4);
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: calc(var(--vh, 1vh) * 100);
+  background: rgba(140, 122, 91, 0.6);
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.2);
+  transition: transform 1.5s ease-in-out;
+  z-index: 1;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(231, 215, 187, 0.4);
 }
 
 .left-door {
-    left: 0;
-    border-right: 1px solid #7f4f24;
-    transform: translateX(0);
+  left: 0;
+  border-right: 1px solid #7f4f24;
+  transform: translateX(0);
 }
 
 .right-door {
-    right: 0;
-    border-left: 1px solid #7f4f24;
-    transform: translateX(0);
+  right: 0;
+  border-left: 1px solid #7f4f24;
+  transform: translateX(0);
 }
 
 #enter-btn {
-    position: relative;
-    z-index: 1100;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    object-fit: cover;
-    transition: transform 0.3s ease;
+  position: relative;
+  z-index: 1100;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
 #enter-btn:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 /* Section Backgrounds */
 .section {
-    width: 100%;
-    min-height: 100vh;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: contain;
-    padding: 60px 20px;
-    text-align: center;
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-weight: 400;
-    font-size: 1rem;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: contain;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1rem;
 }
 
 .section1 {
-    background-image: url('https://placehold.co/800x1000/7f4f24/e7d7bb?text=Section+1+Background');
-    background-attachment: fixed;
+  background-image: url('1.jpg');
+  background-attachment: fixed;
 }
 
 .section2 {
-    background-image: url('https://placehold.co/800x1000/e7d7bb/7f4f24?text=Section+2+Background');
-    background-attachment: fixed;
+  background-image: url('2.jpg');
+  background-attachment: fixed;
 }
 
 /* Inline Names */
 .inline-names {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    gap: 0.2rem;
-    max-width: 100%;
-    white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0.2rem;
+  max-width: 100%;
+  white-space: nowrap;
 }
 
 .inline-names span {
-    display: inline-block;
-    font-size: min(2.2rem, 4vw);
-    line-height: 1;
-    letter-spacing: -1px;
+  display: inline-block;
+  font-size: min(2.2rem, 4vw);
+  line-height: 1;
+  letter-spacing: -1px;
 }
 
 .inline-names span.name-initial {
-    font-family: 'Mrs Saint Delafield', cursive;
-    font-size: 3rem;
-    color: #7f4f24;
-    line-height: 1;
-    margin-right: 0.2rem;
+  font-family: 'Mrs Saint Delafield', cursive;
+  font-size: 3rem;
+  color: #7f4f24;
+  line-height: 1;
+  margin-right: 0.2rem;
 }
 
 .inline-names span.name-rest {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2rem;
-    color: #7f4f24;
-    letter-spacing: 0.05rem;
-    line-height: 1;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  color: #7f4f24;
+  letter-spacing: 0.05rem;
+  line-height: 1;
 }
 
 /* Hero Section */
 .hero {
-    width: 80%;
-    max-width: 350px;
-    text-align: center;
-    color: black;
-    line-height: 1.4;
+  width: 80%;
+  max-width: 350px;
+  text-align: center;
+  color: black;
+  line-height: 1.4;
 }
 
 .hero p {
-    font-family: 'Taviraj', serif;
-    font-style: italic;
-    font-weight: 300;
-    font-size: 1rem;
-    color: black;
-    letter-spacing: 0.5px;
-    display: block;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    line-height: 1.6;
+  font-family: 'Taviraj', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1rem;
+  color: black;
+  letter-spacing: 0.5px;
+  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
 }
 
 .hero h1 {
-    font-size: 1.3rem;
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-weight: 450;
-    color: #7f4f24;
-    letter-spacing: 1px;
-    display: block;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
+  font-size: 1.3rem;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 450;
+  color: #7f4f24;
+  letter-spacing: 1px;
+  display: block;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
 }
 
 .hero h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 550;
-    font-size: 1rem;
-    color: #7f4f24;
-    letter-spacing: 0.5px;
-    display: block;
-    margin-top: -0.5rem;
-    margin-bottom: -0.5rem;
-    line-height: 1.6;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 550;
+  font-size: 1rem;
+  color: #7f4f24;
+  letter-spacing: 0.5px;
+  display: block;
+  margin-top: -0.5rem;
+  margin-bottom: -0.5rem;
+  line-height: 1.6;
 }
 
 .hero h6 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 3rem;
-    color: #582f0e;
-    font-weight: 250;
-    display: block;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: #582f0e;
+  font-weight: 250;
+  display: block;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
 }
 
 /* Save-Date, Maps, Phone Buttons */
 .save-date-buttons,
 .maps-buttons,
 .phone-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-    margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 2rem auto;
 }
 
 .save-date-buttons a,
 .maps-buttons a,
 .phone-buttons a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .save-date-buttons a button,
 .maps-buttons a button,
 .phone-buttons a button {
-    margin: 0.5rem;
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
-    cursor: pointer;
-    border-radius: 6px;
-    border: none;
-    background-color: #e7d7bb;
-    color: #7f4f24;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    line-height: 1.4;
+  margin: 0.5rem;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  background-color: #e7d7bb;
+  color: #7f4f24;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.4;
 }
 
 .save-date-buttons a button:hover,
 .maps-buttons a button:hover,
 .phone-buttons a button:hover {
-    background-color: #d8cab8;
+  background-color: #d8cab8;
 }
 
 /* Timeline */
 .timeline-container {
-    padding: 2rem;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 350px;
-    margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 350px;
+  margin: 2rem auto;
 }
 
 .timeline-item {
-    display: flex;
-    margin-bottom: 1.5rem;
-    align-items: flex-start;
+  display: flex;
+  margin-bottom: 1.5rem;
+  align-items: flex-start;
 }
 
 .timeline-time {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 600;
-    font-size: 1.25rem;
-    color: #7f4f24;
-    width: 80px;
-    flex-shrink: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #7f4f24;
+  width: 80px;
+  flex-shrink: 0;
 }
 
 .timeline-event {
-    flex-grow: 1;
-    padding-left: 0.5rem;
+  flex-grow: 1;
+  padding-left: 0.5rem;
 }
 
 /* ===== RSVP FORM ===== */
 .container {
-    background: rgba(255, 255, 255, 0.5);
-    padding: 1.5rem;
-    max-width: 90vw;
-    width: 100%;
-    margin: 0 auto;
-    color: black;
-    box-sizing: border-box;
-    border-radius: 8px;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 1.5rem;
+  max-width: 90vw;
+  width: 100%;
+  margin: 0 auto;
+  color: black;
+  box-sizing: border-box;
+  border-radius: 8px;
 }
 
 .rsvp {
-    font-family: 'Taviraj', serif;
-    font-style: italic;
-    font-weight: 300;
-    color: black;
-    letter-spacing: 0.5px;
-    line-height: 1.6;
+  font-family: 'Taviraj', serif;
+  font-style: italic;
+  font-weight: 300;
+  color: black;
+  letter-spacing: 0.5px;
+  line-height: 1.6;
 }
 
 .rsvp p {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .rsvp label {
-    display: block;
-    margin-top: 1rem;
-    margin-bottom: 0.3rem;
-    text-align: left;
-    font-family: 'Taviraj', serif;
-    font-style: italic;
-    font-weight: 400;
-    font-size: 0.9rem;
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  text-align: left;
+  font-family: 'Taviraj', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.9rem;
 }
 
 .rsvp input,
 .rsvp select {
-    width: 100%;
-    padding: 0.8rem;
-    margin-bottom: 0.5rem;
-    border: 1px solid #d8cab8;
-    border-radius: 4px;
-    background: rgba(255,255,255,0.7);
-    color: #333;
-    font-family: 'Taviraj', serif;
-    font-size: 0.9rem;
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #d8cab8;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.7);
+  color: #333;
+  font-family: 'Taviraj', serif;
+  font-size: 0.9rem;
 }
 
 .rsvp button {
-    margin: 1.5rem auto 0;
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 6px;
-    border: none;
-    background-color: #e7d7bb;
-    color: #7f4f24;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    line-height: 1.4;
-    text-align: center;
-    display: block;
+  margin: 1.5rem auto 0;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  background-color: #e7d7bb;
+  color: #7f4f24;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  line-height: 1.4;
+  text-align: center;
+  display: block;
 }
 
 .rsvp button:hover {
-    background-color: #d8cab8;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background-color: #d8cab8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 #rsvp-response {
-    font-family: 'Taviraj', serif;
-    font-style: italic;
-    font-size: 0.9rem;
-    margin-top: 1rem;
-    padding: 0.5rem;
-    text-align: center;
-    color: #7f4f24;
-    display: none;
+  font-family: 'Taviraj', serif;
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  text-align: center;
+  color: #7f4f24;
+  display: none;
 }
 
 /* Make the radio buttons side by side */
 .rsvp-radio-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.1rem 1rem;   /* first value = row gap, second value = column gap */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.1rem 1rem;   /* first value = row gap, second value = column gap */
 }
 
 .rsvp-radio-group label {
-    display: flex;        /* make label a flex container */
-    align-items: center;  /* vertically align radio and text */
-    gap: 0rem;          /* space between radio and text */
-    white-space: nowrap;
-    font-family: 'Taviraj', serif;
-    font-style: italic;
-    font-weight: 400;
-    font-size: 0.95rem;
-    color: #333;
-    cursor: pointer;
+  display: flex;        /* make label a flex container */
+  align-items: center;  /* vertically align radio and text */
+  gap: 0rem;          /* space between radio and text */
+  white-space: nowrap;
+  font-family: 'Taviraj', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: #333;
+  cursor: pointer;
 }
 
+
 .rsvp-radio-group input[type="radio"] {
-    margin-right: 0; /* space between radio and text */
-    accent-color: #7f4f24; /* match your color theme */
+  margin-right: 0; /* space between radio and text */
+  accent-color: #7f4f24; /* match your color theme */
 }
 
 /* ===== Media Queries ===== */
 @media (max-width: 768px) {
-    .container {
-        padding: 1.2rem;
-        width: 95%;
-    }
-    
-    .section-divider img {
-        width: 80vw;
-        max-width: 300px;
-    }
+  .container {
+    padding: 1.2rem;
+    width: 95%;
+  }
+  
+  .section-divider img {
+    width: 80vw;
+    max-width: 300px;
+  }
 
-    .section {
-        background-size: cover;
-        background-attachment: fixed;
-    }
+  .section {
+    background-size: cover;
+    background-attachment: fixed;
+  }
 
-    .section2 {
-        background-attachment: fixed;
-        background-size: cover;
-    }
+  .section2 {
+    background-attachment: fixed;
+    background-size: cover;
+  }
 
-    .rsvp button {
-        padding: 0.7rem 1.2rem;
-        font-size: 0.9rem;
-    }
+  .rsvp button {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
 
-    .rsvp input,
-    .rsvp select {
-        padding: 0.7rem;
-    }
+  .rsvp input,
+  .rsvp select {
+    padding: 0.7rem;
+  }
 }
 
 @media (max-width: 480px) {
-    .container {
-        padding: 1rem;
-    }
+  .container {
+    padding: 1rem;
+  }
 
-    .rsvp label {
-        font-size: 0.85rem;
-    }
+  .rsvp label {
+    font-size: 0.85rem;
+  }
 
-    .rsvp input,
-    .rsvp select {
-        padding: 0.6rem;
-        font-size: 0.85rem;
-    }
+  .rsvp input,
+  .rsvp select {
+    padding: 0.6rem;
+    font-size: 0.85rem;
+  }
 
-    .section-divider img {
-        width: 80vw;
-        max-width: 300px;
-    }
+  .section-divider img {
+    width: 80vw;
+    max-width: 300px;
+  }
 }
