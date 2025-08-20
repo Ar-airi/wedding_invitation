@@ -469,7 +469,7 @@ html, body {
 
 .rsvp-radio-group {
   display: flex;
-  gap: 1rem; /* spacing between options */
+  gap: 0.2rem; /* spacing between options */
   justify-content: center;
   flex-wrap: wrap; /* wrap on small screens */
   margin-top: 0.5rem;
@@ -550,4 +550,5 @@ html, body {
   }
 
 }
+
 
