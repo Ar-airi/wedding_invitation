@@ -206,37 +206,20 @@ enterBtn.addEventListener("click", () => {
     const targetY = document.querySelector(".section2").offsetTop;
 
     // Start a smooth scroll animation
-    setTimeout(() => {
-  entryScreen.style.display = "none";
-  document.body.style.overflow = "auto";
-
-  // Smooth auto-scroll like jemputan.me
-  const targetY = document.body.scrollHeight - window.innerHeight; // scroll to bottom
-  let startY = window.scrollY;
-  let distance = targetY - startY;
-  let startTime = null;
-
-  function easeInOutQuad(t) {
-    return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
-  }
-
-  function smoothScroll(timestamp) {
-    if (!startTime) startTime = timestamp;
-    let elapsed = timestamp - startTime;
-    let duration = 10000; // total scroll duration in ms (adjust for speed)
-    let progress = Math.min(elapsed / duration, 1);
-    let easedProgress = easeInOutQuad(progress);
-    window.scrollTo(0, startY + distance * easedProgress);
-
-    if (progress < 1) {
-      requestAnimationFrame(smoothScroll);
+    function smoothScroll() {
+      const currentY = window.scrollY;
+      if (currentY < targetY) {
+        // Scroll a portion closer each frame (tweak multiplier for speed)
+        window.scrollTo({
+          top: currentY + (targetY - currentY) * 0.01,
+          behavior: "smooth"
+        });
+        requestAnimationFrame(smoothScroll);
+      }
     }
-  }
-
-  requestAnimationFrame(smoothScroll);
-
-}, 1600); // Wait for doors animation
-
+    requestAnimationFrame(smoothScroll);
+    
+  }, 1600); // Wait for doors to finish
 });
 
 
@@ -308,7 +291,6 @@ form.addEventListener('submit', function(e) {
 
 </body>
 </html>
-
 
 
 
