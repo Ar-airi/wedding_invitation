@@ -6,7 +6,7 @@ form.addEventListener('submit', function(e) {
   e.preventDefault();
 
   submitBtn.disabled = true;
-  responseDiv.innerText = "Menghantar... Sila tunggu.";
+  responseDiv.innerText = "Sending your response...";
 
   const formData = new FormData(form);
 
@@ -15,13 +15,14 @@ form.addEventListener('submit', function(e) {
     body: formData
   })
   .then(() => {
-    responseDiv.innerText = "Terima kasih atas jawapan anda!";
+    responseDiv.innerText = "Thank you! Your Response has been received.";
     form.reset();
   })
   .catch(() => {
-    responseDiv.innerText = "Ralat berlaku. Sila cuba lagi.";
+    responseDiv.innerText = "Please try again later.";
   })
   .finally(() => {
     submitBtn.disabled = false;
   });
 });
+
