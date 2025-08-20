@@ -33,7 +33,6 @@ form.addEventListener('submit', function(e) {
   const bgm = document.getElementById("bgm");
 
   enterBtn.addEventListener("click", () => {
-    enterBtn.style.display = "none";
     bgm.volume = 0.5;
     bgm.play().catch(e => console.warn("Autoplay failed:", e));
 
@@ -56,3 +55,4 @@ form.addEventListener('submit', function(e) {
 
     }, 1600); // Wait for doors to finish
   });
+
