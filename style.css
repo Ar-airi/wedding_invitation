@@ -389,7 +389,7 @@ html, body {
 .rsvp-radio-group label {
   display: flex;        /* make label a flex container */
   align-items: left;  /* vertically align radio and text */
-  gap: 0.2rem;          /* space between radio and text */
+  gap: 0rem;          /* space between radio and text */
   white-space: nowrap;
   font-family: 'Taviraj', serif;
   font-style: italic;
@@ -457,6 +457,7 @@ html, body {
     max-width: 300px;
   }
 }
+
 
 
 
