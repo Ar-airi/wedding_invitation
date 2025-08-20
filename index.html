@@ -157,7 +157,7 @@
               <label class="custom-label">
                 <input type="radio" name="Kehadiran" value="customNumber" id="customRadio">
                 Hadir bersama  
-                <input type="number" id="customNumber" name="Jumlah_Tetamu" min="1" style="width: 60px; height: 20px; margin: 0 5px;" disabled>
+                <input type="number" id="customNumber" name="Jumlah_Tetamu" min="1" max="10" style="width: 60px; height: 20px; margin: 0 5px;" disabled>
                  orang
               </label>
             </div>
@@ -252,7 +252,7 @@ form.addEventListener('submit', function(e) {
 
   if (customRadio.checked) {
     const numValue = customNumber.value;
-    if (!numValue || numValue < 1) {
+    if (!numValue || numValue < 1 || numValue > 10) {
       responseDiv.innerHTML = '<p style="color:#cc0000;">Sila masukkan bilangan tetamu</p>';
       responseDiv.style.display = 'block';
       customNumber.focus();
@@ -286,6 +286,7 @@ form.addEventListener('submit', function(e) {
 
 </body>
 </html>
+
 
 
 
