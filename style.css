@@ -392,6 +392,7 @@ html, body {
   display: flex;        /* make label a flex container */
   flex-wrap: left;
   align-items: left;  /* vertically align radio and text */
+  flex-direction: column;
   gap: 0rem;          /* space between radio and text */
   white-space: nowrap;
   font-family: 'Taviraj', serif;
@@ -410,6 +411,7 @@ html, body {
 .custom-label {
   display: flex;
   align-items: left;
+  flex-direction: column;
   white-space: normal; 
   gap: 0.3rem; /* spacing between radio, text, input, pax */
   font-family: 'Taviraj', serif;
@@ -436,6 +438,7 @@ html, body {
 .rsvp-radio-group .custom-label {
   display: flex;
   align-items: left;
+  flex-direction: column;
   gap: 0.3rem;      /* space between radio + text/input */
   flex-wrap: wrap;  /* allow wrapping when too small */
   width: 100%;      /* each option takes full line like normal radios */
@@ -494,6 +497,7 @@ html, body {
     max-width: 300px;
   }
 }
+
 
 
 
