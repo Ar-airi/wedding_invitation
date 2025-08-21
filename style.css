@@ -405,7 +405,9 @@ html, body {
 .rsvp-radio-group input[type="radio"] {
   margin: 0;
   accent-color: #7f4f24;
+  flex-shrink: 0;
 }
+
 .custom-label {
   display: flex;
   align-items: left;
@@ -505,6 +507,7 @@ html, body {
     max-width: 300px;
   }
 }
+
 
 
 
