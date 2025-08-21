@@ -376,13 +376,14 @@ html, body {
   color: #7f4f24;
   display: none;
 }
-
+/* Make the radio buttons side by side */
 .rsvp-radio-group {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   text-align: left;
   width: 100%;
+  max-width: 100%;
 }
 
 .rsvp-radio-group input[type="radio"] {
@@ -406,8 +407,7 @@ html, body {
 .rsvp-radio-group label,
 .rsvp-radio-group .custom-label {
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  align-items: flex-start;
   margin: 0;
   padding: 0.3rem 0;
   font-family: 'Taviraj', serif;
@@ -418,14 +418,21 @@ html, body {
   cursor: pointer;
   width: 100%;
   box-sizing: border-box;
+  max-width: 100%;
+  gap: 0.5rem;
 }
 
-/* Specific styling for the custom label with number input */
+/* Allow text to wrap but keep radio button and text on same line */
+.rsvp-radio-group label {
+  flex-wrap: wrap;
+}
+
+/* Custom label specific styling */
 .rsvp-radio-group .custom-label {
   display: flex;
   align-items: center;
-  flex-wrap: nowrap;
-  white-space: nowrap;
+  flex-wrap: wrap;
+  gap: 0.3rem;
 }
 /*===== Media Queries ===== */
 @media (max-width: 768px) {
@@ -483,6 +490,17 @@ html, body {
   .rsvp-radio-group label,
   .rsvp-radio-group .custom-label {
     font-size: 0.85rem;
+    align-items: flex-start;
+  }
+  
+  .rsvp-radio-group label {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .rsvp-radio-group .custom-label {
+    flex-wrap: wrap;
+    gap: 0.2rem;
   }
   
   .custom-label input[type="number"] {
@@ -490,7 +508,14 @@ html, body {
     font-size: 0.8rem;
     margin: 0 3px;
   }
+  
+  /* Ensure text wraps properly on mobile */
+  .rsvp-radio-group span {
+    white-space: normal;
+    word-wrap: break-word;
+  }
 }
+
 
 
 
