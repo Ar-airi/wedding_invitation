@@ -12,20 +12,6 @@
   <meta property="og:url" content="https://ar-airi.github.io/AI/" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
-</head><!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="color-scheme" content="light only" />
-  <title>Aqielah & Idzuddin</title>
-  <link rel="stylesheet" href="style.css" />
-  <meta property="og:title" content="Walimatul Urus Aqielah & Idzuddin | Sabtu 22/11/2025" />
-  <meta property="og:description" content="Tekan pautan untuk lihat jemputan" />
-  <meta property="og:image" content="https://raw.githubusercontent.com/Ar-airi/AI/main/assets/1.jpg" />
-  <meta property="og:url" content="https://ar-airi.github.io/AI/" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
 </head>
 <body style="background-color: #e7d7bb; overflow: hidden;">
 
@@ -144,7 +130,6 @@
 
   </section>
 </div>
-
 <script>
   // ===== Viewport Height =====
   function setVH() {
@@ -166,11 +151,21 @@
     enterBtn.style.display = "none";
     bgm.volume = 0.5;
     bgm.play().catch(e => console.warn("Autoplay failed:", e));
+
     leftDoor.style.transform = "translateX(-100%)";
     rightDoor.style.transform = "translateX(100%)";
+
     setTimeout(() => {
+      // Hide overlay completely
       entryScreen.style.display = "none";
+      entryScreen.style.pointerEvents = "none"; // important
       document.body.style.overflow = "auto";
+
+      // Optional: auto-scroll to first section
+      const section1 = document.querySelector(".section1");
+      if (section1) {
+        section1.scrollIntoView({ behavior: "smooth" });
+      }
     }, 1600);
   });
 
@@ -181,7 +176,6 @@
   const radios = document.querySelectorAll("input[name='Kehadiran']");
   const responseDiv = document.getElementById('rsvp-response');
 
-  // Enable/disable custom number input
   radios.forEach(radio => {
     radio.addEventListener("change", () => {
       if (customRadio.checked) {
@@ -247,217 +241,5 @@
   });
 </script>
 
-
 </body>
 </html>
-
-<body style="background-color: #e7d7bb; overflow: hidden;">
-
-<!-- Welcome Door Animation -->
-<div id="entry-screen">
-  <div class="door left-door"></div>
-  <div class="door right-door"></div>
-  <img id="enter-btn" src="logo.jpg" alt="Tap to Enter" />
-</div>
-<audio id="bgm" loop>
-  <source src="1.mp3" type="audio/mpeg">
-</audio>
-
-<!-- Section 1 -->
-<div class="section section1">
-  <section class="hero">
-    <br>
-  </section>
-</div>
-
-<!-- Section 2 -->
-<div class="section section2">
-  <section class="hero">
-    <div class="section-divider">
-      <img src="border.jpg" alt="divider">
-    </div>
-
-    <p>Assalamualaikum w.b.t<br>Dengan penuh kesyukuran dan segala hormatnya, kami<br>With all gratitude and respect, we</p>
-    <h1><b>SHAIFULHIZAN BIN HASHIM<br>&<br>AILEEN CHAN BINTI MOHD MANSOR</b></h1>
-    <p>menjemput YBhg. Tan Sri/Puan Sri/Dato'/Datin/<br>Tuan/Puan/Saudara/Saudari<br>ke majlis perkahwinan puteri kami<br>cordially invite you and family to join us at the<br>wedding reception of our daughter</p>
-
-    <br>
-    <div class="inline-names">
-      <span class="name-initial">A</span>
-      <span class="name-rest">LYA AQIELAH</span>
-    </div>
-    <h2>BINTI SHAIFULHIZAN<br>&</h2>
-    <div class="inline-names">
-      <span class="name-initial">M</span>
-      <span class="name-rest">OHAMAD IDZUDDIN</span>
-    </div>
-    <h2>BIN KAMARUDDIN</h2>
-
-    <div class="section-divider">
-      <img src="border.jpg" alt="divider">
-    </div>
-
-    <h6>Butiran Majlis<br>Event Details</h6>
-    <p>Sabtu/Saturday<br><br>22 November 2025<br>1 Jamadil Akhir 1447H<br><br>Victoria Hall,<br>Kamalinda Events & Wedding,<br>Level UG, Utropolis Marketplace,<br>Jalan Kontraktor U1/14,<br>40150 Shah Alam, Selangor</p>
-
-    <div class="maps-buttons">
-      <a href="https://maps.app.goo.gl/YPK3yFDxph92dFqp9?g_st=aw" target="_blank" rel="noopener noreferrer">
-        <button>Google Maps</button>
-      </a>
-      <a href="https://waze.com/ul/hw281x49c9" target="_blank" rel="noopener noreferrer">
-        <button>Waze</button>
-      </a>
-    </div>
-
-    <div class="section-divider">
-      <img src="border.jpg" alt="divider">
-    </div>
-
-    <h6>Rsvp</h6>
-    <p>Mohon sahkan kehadiran anda sebelum<br>Kindly RSVP before</p>
-    <p>20.10.2025</p>
-
-    <!-- RSVP Form -->
-    <div class="container">
-      <section class="rsvp">
-        <form id="rsvp-form" action="https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec" method="POST">
-
-          <label for="nama">Nama:</label>
-          <input type="text" id="nama" name="Nama" required>
-
-          <label for="telefon">Nombor Telefon:</label>
-          <input type="tel" id="telefon" name="Nombor_Telefon" required>
-
-          <label>Kehadiran:</label>
-          <div class="rsvp-radio-group">
-            
-            <label class="radio-option">
-              <input type="radio" name="Kehadiran" value="0" required>
-              <span class="radio-text">Tidak dapat hadir</span>
-            </label>
-
-            <label class="radio-option">
-              <input type="radio" name="Kehadiran" value="1">
-              <span class="radio-text">Hadir seorang sahaja</span>
-            </label>
-
-            <label class="radio-option custom-number">
-              <input type="radio" name="Kehadiran" value="customNumber" id="customRadio">
-              <span class="text-wrapper">
-                <span class="main-text">Hadir bersama</span>
-                <span class="number-wrapper">
-                  <input type="number" id="customNumber" name="Jumlah_Tetamu" min="1" max="10" disabled> orang
-                </span>
-              </span>
-            </label>
-
-
-          </div>
-
-          <div class="rsvp-button-container">
-            <button type="submit">RSVP</button>
-          </div>
-
-        </form>
-        <div id="rsvp-response" style="display: none;"></div>
-      </section>
-    </div>
-
-  </section>
-</div>
-
-<script>
-  // ===== Viewport Height =====
-  function setVH() {
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-  }
-  window.addEventListener('load', setVH);
-  window.addEventListener('resize', setVH);
-
-  // ===== Entry Screen Animation =====
-  const enterBtn = document.getElementById("enter-btn");
-  const entryScreen = document.getElementById("entry-screen");
-  const leftDoor = document.querySelector(".left-door");
-  const rightDoor = document.querySelector(".right-door");
-  const bgm = document.getElementById("bgm");
-  document.body.style.overflow = "hidden";
-
-  enterBtn.addEventListener("click", () => {
-    enterBtn.style.display = "none";
-    bgm.volume = 0.5;
-    bgm.play().catch(e => console.warn("Autoplay failed:", e));
-    leftDoor.style.transform = "translateX(-100%)";
-    rightDoor.style.transform = "translateX(100%)";
-    setTimeout(() => {
-      entryScreen.style.display = "none";
-      document.body.style.overflow = "auto";
-    }, 1600);
-  });
-
-  // ===== RSVP Form Handling =====
-  const form = document.getElementById('rsvp-form');
-  const customRadio = document.getElementById("customRadio");
-  const customNumber = document.getElementById("customNumber");
-  const radios = document.querySelectorAll("input[name='Kehadiran']");
-  const responseDiv = document.getElementById('rsvp-response');
-
-  radios.forEach(radio => {
-    radio.addEventListener("change", () => {
-      if (customRadio.checked) {
-        customNumber.disabled = false;
-        customNumber.focus();
-      } else {
-        customNumber.disabled = true;
-        customNumber.value = "";
-      }
-    });
-  });
-
-  customNumber.addEventListener("focus", () => {
-    customRadio.checked = true;
-    customNumber.disabled = false;
-  });
-
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const formData = new FormData(form);
-
-    if (customRadio.checked) {
-      const numValue = customNumber.value;
-      if (!numValue || numValue < 1) {
-        responseDiv.innerHTML = '<p style="color:#cc0000;">Sila masukkan bilangan tetamu</p>';
-        responseDiv.style.display = 'block';
-        customNumber.focus();
-        return;
-      }
-      formData.set("Jumlah_Tetamu", numValue);
-    } else {
-      formData.delete("Jumlah_Tetamu");
-    }
-
-    responseDiv.innerHTML = '<p style="color:#7f4f24;">Menghantar maklumat anda...</p>';
-    responseDiv.style.display = 'block';
-
-    fetch(form.action, { method: 'POST', body: formData })
-      .then(res => res.json())
-      .then(data => {
-        if (data.status === "error") {
-          responseDiv.innerHTML = `<p style="color:#cc0000;">${data.message}</p>`;
-        } else {
-          responseDiv.innerHTML = `<p style="color:#7f4f24;">${data.message}</p>`;
-          form.reset();
-          customNumber.disabled = true;
-        }
-      })
-      .catch(error => {
-        responseDiv.innerHTML = '<p style="color:#cc0000;">Oops! Something went wrong. Please try again.</p>';
-        console.error('Error:', error);
-      });
-  });
-</script>
-
-</body>
-</html>
-
-
