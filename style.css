@@ -385,6 +385,7 @@ html, body {
   gap: 0.2rem 1rem; 
   width: 100%;
   justify-content: flex-start;
+  flex-direction: row;
 }
 
 .rsvp-radio-group label {
@@ -493,6 +494,7 @@ html, body {
     max-width: 300px;
   }
 }
+
 
 
 
