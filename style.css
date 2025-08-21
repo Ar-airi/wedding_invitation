@@ -434,7 +434,7 @@ html, body {
 .rsvp-radio-group label,
 .rsvp-radio-group .custom-label {
   display: flex;
-  align-items: center;
+  align-items: left;
   gap: 0.3rem;      /* space between radio + text/input */
   flex-wrap: wrap;  /* allow wrapping when too small */
   width: 100%;      /* each option takes full line like normal radios */
@@ -493,6 +493,7 @@ html, body {
     max-width: 300px;
   }
 }
+
 
 
 
