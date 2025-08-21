@@ -239,7 +239,7 @@ form.addEventListener('submit', function(e) {
 
   if (customRadio.checked) {
     const numValue = customNumber.value;
-    if (!numValue || numValue < 1 || numValue > 10) {
+    if (!numValue || numValue < 0 || numValue > 10) {
       responseDiv.innerHTML = '<p style="color:#cc0000;">Sila masukkan bilangan tetamu</p>';
       responseDiv.style.display = 'block';
       customNumber.focus();
@@ -273,6 +273,7 @@ form.addEventListener('submit', function(e) {
 
 </body>
 </html>
+
 
 
 
